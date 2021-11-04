@@ -1,0 +1,7 @@
+{
+  "name": "EUappFallida",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
