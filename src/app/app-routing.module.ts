@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'bitacora',
+    loadChildren: () => import('./pages/bitacora/bitacora.module').then( m => m.BitacoraPageModule)
+  },
+  {
+    path: 'bienvenido',
+    loadChildren: () => import('./pages/bienvenido/bienvenido.module').then( m => m.BienvenidoPageModule)
+  },
 ];
 
 @NgModule({

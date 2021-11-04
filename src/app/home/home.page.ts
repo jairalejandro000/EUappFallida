@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 
 @Component({
@@ -9,7 +10,8 @@ import { MenuController } from '@ionic/angular';
 export class HomePage {
 
   constructor(
-    private menu: MenuController
+    private menu: MenuController,
+    private router: Router
   ) {}
 
   openFirst() {
@@ -18,7 +20,7 @@ export class HomePage {
   }
   registrar(){
     console.log('j');
-
+    this.router.navigateByUrl('bienvenido');
   }
 
 
