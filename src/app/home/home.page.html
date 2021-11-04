@@ -1,22 +1,20 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Bitacoras
+    <ion-title (click)="titleClicked()">
+      {{a}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
+<div class="login">
   <ion-item>
-    <ion-label position="stacked">Usuario</ion-label>
+    <ion-label position="floating">Usuario</ion-label>
     <ion-input></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="stacked">Password</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-button color="danger" disabled>Iniciar sesion</ion-button>
-  <ion-item (click)="registrar()">
-    <ion-label >Registrarse</ion-label>
-  </ion-item>
-</ion-content>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input disabled type="password"></ion-input>
+  </ion-item><br>
+  <ion-button *ngIf="show" color="primary" (click)="buttonClicked()">Iniciar sesion</ion-button><br><br>
+    <a style="color:white">¿Aun no tienes una cuenta? </a>
+    <a (click)="registrar()">Registrarse</a>
+</div>
