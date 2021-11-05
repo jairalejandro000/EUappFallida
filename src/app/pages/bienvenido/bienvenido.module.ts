@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { BienvenidoPageRoutingModule } from './bienvenido-routing.module';
 
 import { BienvenidoPage } from './bienvenido.page';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BienvenidoPageRoutingModule
+    BienvenidoPageRoutingModule,
   ],
-  declarations: [BienvenidoPage]
+  declarations: [BienvenidoPage],
 })
 export class BienvenidoPageModule {}

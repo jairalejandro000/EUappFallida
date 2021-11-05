@@ -12,7 +12,7 @@ export class HomePage {
   a = 'Bitacoras';
   constructor(
     private menu: MenuController,
-    private router: Router,
+    private router: Router
   ) {}
   openFirst() {
     this.menu.enable(true, 'first');
@@ -28,4 +28,5 @@ export class HomePage {
   titleClicked(){
     this.a = '';
   }
+
 }
