@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';  
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-bienvenido',
@@ -15,12 +15,12 @@ export class BienvenidoPage {
   capturarB(){
     this.router.navigateByUrl('bitacora');
   }
-  async showAlert() {  
-    const alert = await this.alertCtrl.create({  
-      header: 'BitacorApp',  
-      subHeader: 'Que tenga un buen día',  
-      buttons: ['OK']  
-    });  
+  async showAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'BitacorApp',
+      subHeader: 'Que tenga un buen día',
+      buttons: ['No']
+    });
     await alert.present();
-  }  
-}  
+  }
+}

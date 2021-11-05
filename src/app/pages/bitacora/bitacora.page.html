@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Bitacora</ion-title>
+    <ion-title>Capturar bitacora</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge>
+    <ion-fab-button (click)="presentToast()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-item color="dark">
+    <ion-label position="fixed">Descripcion</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item color="danger">
+    <ion-label position="floating">Accion</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Hora</ion-label>
+    <ion-datetime displayFormat="DD MM YYYY" placeholder="Hora de la captura"></ion-datetime>
+  </ion-item>
+  <ion-item color="gray">
+    <ion-label position="stacked">Rol</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item color="warning">
+    <ion-label position="floating">Titulo</ion-label>
+    <ion-input disabled></ion-input>
+  </ion-item>
+  <ion-item (click)="presentLoading('camara estamos contando las horas')">
+    <ion-label>Fecha</ion-label>
+    <ion-datetime displayFormat="h:mm a" placeholder="Fecha de la captura"></ion-datetime>
+  </ion-item>
 </ion-content>
